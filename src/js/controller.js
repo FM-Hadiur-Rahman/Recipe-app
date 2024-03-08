@@ -114,6 +114,9 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+const newRecipe = function () {
+  console.log('new Recipe');
+};
 
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -123,6 +126,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newRecipe();
 };
 init();
 // window.addEventListener('hashchange', controlRecipes);
